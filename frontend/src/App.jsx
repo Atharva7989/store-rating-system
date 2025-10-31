@@ -20,13 +20,12 @@ import StoreLayout from "./layouts/StoreLayout";
 function App() {
   return (
       <BrowserRouter>
-      {/* <Navbar /> */}
+      
       <Routes>
-        {/* 🔐 Auth Routes */}
+        <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
 
-        {/* 🧑‍💼 Admin Routes */}
         <Route
           path="/admin/dashboard"
           element={
