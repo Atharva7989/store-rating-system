@@ -1,0 +1,151 @@
+/* ===== Reset and Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f6fb !important;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px; /* pushes the content down a bit */
+}
+.blue-btn-table {
+  background-color: #007bff; /* Blue */
+  color: black;              /* Black text */
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 5px;
+  transition: none; /* no hover effect */
+}
+
+.add-store-btn{
+    background-color: #28a745; /* green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* ===== Container ===== */
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+/* ===== Title ===== */
+.table-container h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #222;
+}
+
+/* ===== Table Wrapper ===== */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  background: #fff;
+}
+
+thead {
+  background: #007bff;
+  color: #fff;
+}
+
+thead th {
+  padding: 14px 18px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+  background-color: #f1f5ff;
+}
+
+/* ===== Buttons ===== */
+button {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  body {
+    padding-top: 20px;
+  }
+
+  .table-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

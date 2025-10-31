@@ -1,0 +1,11 @@
+.user-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.user-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 220px; /* only if you add sidebar later */
+}
